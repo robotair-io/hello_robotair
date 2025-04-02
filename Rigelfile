@@ -20,14 +20,6 @@ providers:
             username: "robotair"
             password: "{{ vars.REGISTRY_SECRET }}"
 
-    ssh_provider_1:
-        provider: "rigel.providers.core.SSHProvider"
-        with:
-            keys:
-            -
-                hostname: "https://github.com/"
-                env: "DEPLOY_KEYS"
-
 jobs:
 
     dockerfile:

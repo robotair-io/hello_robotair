@@ -24,7 +24,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Export repository secrets as envfoxyment variables
+      - name: Export repository secrets as environment variables
         uses: oNaiPs/secrets-to-env-action@v1.4
         with:
           secrets: ${{ toJSON(secrets) }}
