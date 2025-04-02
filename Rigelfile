@@ -18,7 +18,7 @@ providers:
         with:
             server: "https://index.docker.io/v1/"
             username: "robotair"
-            password: "{{ vars.REGISTRY_SECRET }}"
+            password: "{{ secrets.REGISTRY_SECRET }}"
 
 jobs:
 
