@@ -20,6 +20,7 @@ providers:
             username: "robotair"
             password: "{{ vars.REGISTRY_PASSWORD }}"
 
+
 jobs:
 
     dockerfile:
@@ -30,6 +31,8 @@ jobs:
             compiler:
                 name: "colcon"
             username: "robotair"
+            entrypoint:
+                - "ros2 run hello_robotair hello_node"
 
     build:
         plugin: "rigel.plugins.core.BuildXPlugin"
