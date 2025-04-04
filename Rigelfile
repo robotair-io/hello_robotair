@@ -6,7 +6,7 @@
 ---
 
 vars:
-    distro: "jazzy"
+    distro: "iron"
 
 application:
     distro: "{{ vars.distro }}"
@@ -25,7 +25,7 @@ jobs:
     dockerfile:
         plugin: "rigel.plugins.core.DockerfilePlugin"
         with:
-            ros_image: "docker.io/library/ros:jazzy-ros-base"
+            ros_image: "docker.io/library/ros:iron-ros-base"
             command: "ros2 run hello_robotair hello_node"
             compiler:
                 name: "colcon"
@@ -37,7 +37,7 @@ jobs:
             image: "robotair/hello_robotair"
             tags:
                 - "latest"
-                - "jazzy-v0.0.1"
+                - "iron-v0.0.1"
             load: False
             push: True
             platforms:
